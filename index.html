@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern E-Commerce Store</title>
+    <link rel="stylesheet" href="task5.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>My E-Commerce Store</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#" id="cartButton">Cart</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h2>Welcome to Our Store</h2>
+        <p>Explore the best products tailored just for you!</p>
+        <img src="C:\apexplanet\task5\welcome.jfif" >
+    </section>
+
+    <!-- Product Section -->
+    <section id="products">
+        <h2>Featured Products</h2>
+        
+        <!-- Smart Watches Category -->
+        <h3>Smart Watches</h3>
+        <div class="product-grid">
+            <div class="product" data-price="39.99">
+                <img src="C:\apexplanet\task5\watch1.jfif?text=Smart+Watch+1" alt="Smart Watch 1">
+                <h4>Smart Watch 1</h4>
+                <p>$39.99</p>
+                <button onclick="addToCart('Smart Watch 1', 39.99)">Add to Cart</button>
+            </div>
+            <div class="product" data-price="49.99">
+                <img src="C:\apexplanet\task5\watch2.jfif?text=Smart+Watch+2" alt="Smart Watch 2">
+                <h4>Smart Watch 2</h4>
+                <p>$49.99</p>
+                <button onclick="addToCart('Smart Watch 2', 49.99)">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Headphones Category -->
+        <h3>Headphones</h3>
+        <div class="product-grid">
+            <div class="product" data-price="29.99">
+                <img src="C:\apexplanet\task5\headphone1.jfif?text=Headphone+1" alt="Headphone 1">
+                <h4>Headphone 1</h4>
+                <p>$29.99</p>
+                <button onclick="addToCart('Headphone 1', 29.99)">Add to Cart</button>
+            </div>
+            <div class="product" data-price="35.99">
+                <img src="C:\apexplanet\task5\headphone2.jfif?text=Headphone+2" alt="Headphone 2">
+                <h4>Headphone 2</h4>
+                <p>$35.99</p>
+                <button onclick="addToCart('Headphone 2', 35.99)">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Cameras Category -->
+        <h3>Cameras</h3>
+        <div class="product-grid">
+            <div class="product" data-price="59.99">
+                <img src="C:\apexplanet\task5\camera1.jfif?text=Camera+1" alt="Camera 1">
+                <h4>Camera 1</h4>
+                <p>$59.99</p>
+                <button onclick="addToCart('Camera 1', 59.99)">Add to Cart</button>
+            </div>
+            <div class="product" data-price="79.99">
+                <img src="C:\apexplanet\task5\camera3.jfif?text=Camera+2" alt="Camera 2">
+                <h4>Camera 2</h4>
+                <p>$79.99</p>
+                <button onclick="addToCart('Camera 2', 79.99)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cartItems"></div>
+            <p id="totalPrice">Total: $0.00</p>
+            <button onclick="clearCart()">Clear Cart</button>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <script src="task5.js"></script>
+</body>
+</html>
